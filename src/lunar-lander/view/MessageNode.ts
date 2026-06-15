@@ -7,6 +7,7 @@
  */
 import { DerivedProperty } from "scenerystack/axon";
 import type { Vector2 } from "scenerystack/dot";
+import { toFixed } from "scenerystack/dot";
 import { Node, Text, VBox } from "scenerystack/scenery";
 import { PhetFont } from "scenerystack/scenery-phet";
 import { Panel } from "scenerystack/sun";
@@ -55,7 +56,7 @@ export class MessageNode extends Node {
 
     const speedProperty = new DerivedProperty(
       [m.landingSpeedEqStringProperty, model.landingSpeedProperty],
-      (eq, speed) => `${eq}${speed.toFixed(2)} m/s`,
+      (eq, speed) => `${eq}${toFixed(speed, 2)} m/s`,
     );
 
     const content = new VBox({

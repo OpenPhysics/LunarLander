@@ -6,7 +6,7 @@
  * panel, score, on-screen throttle controls, and the global keyboard controls.
  * Overlays and sound are layered on in later steps.
  */
-import { Bounds2, Matrix3, Vector2 } from "scenerystack/dot";
+import { Bounds2, Matrix3, toFixed, Vector2 } from "scenerystack/dot";
 import { Shape } from "scenerystack/kite";
 import { ModelViewTransform2, StringUtils } from "scenerystack/phetcommon";
 import { HBox, KeyboardListener, Node } from "scenerystack/scenery";
@@ -215,7 +215,7 @@ export class LunarLanderScreenView extends ScreenView {
             : alerts.crashStringProperty.value;
       this.addAccessibleResponse(
         StringUtils.fillIn(pattern, {
-          speed: model.landingSpeedProperty.value.toFixed(1),
+          speed: toFixed(model.landingSpeedProperty.value, 1),
           score: model.scoreKeeper.scoreProperty.value,
         }),
       );

@@ -76,6 +76,8 @@ const LunarLanderColors = {
   // ── Panels / text / readouts ──────────────────────────────────────────────────
   // Base color for the on-screen control buttons (throttle arrows, full-thrust).
   controlButtonColorProperty: profileColor("controlButton", "#c8c8d0", "#c8c8d0"),
+  // Green "start / play" button on the pre-launch overlay.
+  startButtonColorProperty: profileColor("startButton", "#35cc35", "#1f9e1f"),
   panelFillProperty: profileColor("panelFill", PANEL_FILL_DARK, PANEL_FILL_LIGHT),
   panelStrokeProperty: profileColor("panelStroke", PANEL_STROKE_DARK, PANEL_STROKE_LIGHT),
   foregroundColorProperty: profileColor("foreground", WHITE, BLACK),

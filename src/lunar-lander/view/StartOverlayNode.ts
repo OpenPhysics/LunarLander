@@ -52,7 +52,7 @@ export class StartOverlayNode extends Node {
     const playIcon = new Path(new PlayIconShape(26, 32), { fill: "black" });
     const startButton = new RoundPushButton({
       content: playIcon,
-      baseColor: "#35cc35",
+      baseColor: LunarLanderColors.startButtonColorProperty,
       radius: 36,
       listener: onStart,
       accessibleName: controls.startStringProperty,

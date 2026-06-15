@@ -9,7 +9,9 @@
  * one-shot events (landings, crashes, low fuel) are announced separately via
  * accessible responses from LunarLanderScreenView.
  */
+
 import { DerivedProperty } from "scenerystack/axon";
+import { toFixed } from "scenerystack/dot";
 import { StringUtils } from "scenerystack/phetcommon";
 import { ScreenSummaryContent } from "scenerystack/sim";
 import { StringManager } from "../../i18n/StringManager.js";
@@ -46,8 +48,8 @@ export class LunarLanderScreenSummaryContent extends ScreenSummaryContent {
         const values = {
           altitude: Math.round(altitude),
           range: Math.round(range),
-          vx: vx.toFixed(1),
-          vy: vy.toFixed(1),
+          vx: toFixed(vx, 1),
+          vy: toFixed(vy, 1),
           thrust: Math.round(thrust),
           fuel: Math.round(fuel),
           score: score,
