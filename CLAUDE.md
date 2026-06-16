@@ -18,7 +18,7 @@ SceneryStack port of the classic PhET Flash Lunar Lander. Pilot the module with 
 
 ## Accessibility
 
-Conforms to the shared [OpenPhysics accessibility convention](https://github.com/OpenPhysics/OpenPhysics/blob/main/ACCESSIBILITY.md):
+Conforms to the shared [OpenPhysics accessibility convention](https://github.com/OpenPhysics/Baton/blob/main/ACCESSIBILITY.md):
 `LunarLanderScreenView` registers `LunarLanderScreenSummaryContent` (structured regions + live
 current-details) via the `screenSummaryContent` super-option, orders the PDOM through
 `pdomControlAreaNode`, and exposes a11y strings via `StringManager.getA11yStrings()`. This
