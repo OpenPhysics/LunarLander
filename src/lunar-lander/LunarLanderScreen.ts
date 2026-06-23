@@ -4,6 +4,7 @@
  * The single screen: wires the model and view factories and passes screen-level
  * options (name, background color, tandem) to the parent Screen class.
  */
+import { type EmptySelfOptions, optionize } from "scenerystack/phet-core";
 import type { ScreenOptions } from "scenerystack/sim";
 import { Screen } from "scenerystack/sim";
 import type { Tandem } from "scenerystack/tandem";
@@ -20,12 +21,14 @@ export class LunarLanderScreen extends Screen<LunarLanderModel, LunarLanderScree
     super(
       () => new LunarLanderModel(options.preferences),
       (model) => new LunarLanderScreenView(model, { tandem: options.tandem.createTandem("view") }),
-      {
-        backgroundColorProperty: LunarLanderColors.spaceBackgroundColorProperty,
-        // Adds the standard keyboard-help "?" button to the navigation bar.
-        createKeyboardHelpNode: () => new LunarLanderKeyboardHelpContent(),
-        ...options,
-      },
+      optionize<LunarLanderScreenOptions, EmptySelfOptions, ScreenOptions>()(
+        {
+          backgroundColorProperty: LunarLanderColors.spaceBackgroundColorProperty,
+          // Adds the standard keyboard-help "?" button to the navigation bar.
+          createKeyboardHelpNode: () => new LunarLanderKeyboardHelpContent(),
+        },
+        options,
+      ),
     );
   }
 }
