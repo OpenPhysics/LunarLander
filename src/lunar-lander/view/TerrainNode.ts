@@ -16,7 +16,7 @@ import { Shape } from "scenerystack/kite";
 import type { ModelViewTransform2 } from "scenerystack/phetcommon";
 import { Circle, Line, LinearGradient, Node, Path, RadialGradient } from "scenerystack/scenery";
 import LunarLanderColors from "../../LunarLanderColors.js";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import type { Terrain } from "../model/Terrain.js";
 
 // Small deterministic PRNG (mulberry32) so the texture/boulders are identical every run.

@@ -12,7 +12,7 @@
  */
 import { Multilink } from "scenerystack/axon";
 import { NoiseGenerator, OscillatorSoundGenerator, soundManager } from "scenerystack/tambo";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import type { LunarLanderModel } from "../model/LunarLanderModel.js";
 
 const { MAX_THRUST } = LunarLanderConstants;

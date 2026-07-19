@@ -7,7 +7,7 @@
 import type { ModelViewTransform2 } from "scenerystack/phetcommon";
 import { Circle, Node } from "scenerystack/scenery";
 import LunarLanderColors from "../../LunarLanderColors.js";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import type { LunarLanderModel } from "../model/LunarLanderModel.js";
 
 const { EXPLOSION_DURATION } = LunarLanderConstants;

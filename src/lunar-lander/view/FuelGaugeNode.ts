@@ -10,7 +10,7 @@ import { Node, Rectangle, Text } from "scenerystack/scenery";
 import { PhetFont } from "scenerystack/scenery-phet";
 import { StringManager } from "../../i18n/StringManager.js";
 import LunarLanderColors from "../../LunarLanderColors.js";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import type { LunarLanderModel } from "../model/LunarLanderModel.js";
 
 const { INITIAL_FUEL } = LunarLanderConstants;

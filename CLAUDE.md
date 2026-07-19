@@ -49,7 +49,7 @@ current-details) via the `screenSummaryContent` super-option, orders the PDOM th
 
 ## Compliance carve-outs
 
-- **Nested constants:** `src/lunar-lander/model/LunarLanderConstants.ts` — Flash-port physics constants kept next to the lander model.
+- **Nested constants:** `src/LunarLanderConstants.ts` — Flash-port physics constants kept next to the lander model.
 
 ## Testing
 

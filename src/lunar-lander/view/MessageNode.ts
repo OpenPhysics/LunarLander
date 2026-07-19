@@ -13,8 +13,8 @@ import { PhetFont } from "scenerystack/scenery-phet";
 import { Panel } from "scenerystack/sun";
 import { StringManager } from "../../i18n/StringManager.js";
 import LunarLanderColors from "../../LunarLanderColors.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import { CrashState } from "../model/CrashState.js";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
 import type { LunarLanderModel } from "../model/LunarLanderModel.js";
 
 const { FATAL_SPEED } = LunarLanderConstants;

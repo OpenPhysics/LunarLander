@@ -4,7 +4,7 @@
  */
 
 import { describe, expect, it } from "vitest";
-import LunarLanderConstants from "../src/lunar-lander/model/LunarLanderConstants.js";
+import LunarLanderConstants from "../src/LunarLanderConstants.js";
 import { LunarLanderModel } from "../src/lunar-lander/model/LunarLanderModel.js";
 import { LunarLanderPreferencesModel } from "../src/preferences/LunarLanderPreferencesModel.js";
 

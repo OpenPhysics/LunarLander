@@ -14,9 +14,10 @@ import { PlayPauseButton, ResetAllButton } from "scenerystack/scenery-phet";
 import type { ScreenViewOptions } from "scenerystack/sim";
 import { ScreenView } from "scenerystack/sim";
 import type { Tandem } from "scenerystack/tandem";
+import { FLAT_RESET_ALL_BUTTON_OPTIONS } from "../../common/LunarLanderButtonOptions.js";
 import { StringManager } from "../../i18n/StringManager.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import { CrashState } from "../model/CrashState.js";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
 import type { LunarLanderModel } from "../model/LunarLanderModel.js";
 import { ControlPanel } from "./ControlPanel.js";
 import { ExplosionNode } from "./ExplosionNode.js";
@@ -131,6 +132,7 @@ export class LunarLanderScreenView extends ScreenView {
     throttleControl.bottom = layoutBounds.maxY - margin;
 
     const resetAllButton = new ResetAllButton({
+      ...FLAT_RESET_ALL_BUTTON_OPTIONS,
       listener: () => {
         this.interruptSubtreeInput();
         model.reset();

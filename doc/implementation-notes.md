@@ -54,7 +54,7 @@ Data flows Model → View through AXON `Property` objects and one-shot `Emitter`
   `SPOT_SCORES` palette (width ↔ points inverse relationship in data).
 - **Camera.** View zooms from `ZOOM_START_ALTITUDE` toward `ZOOM_MAX` at touchdown; pans with
   dead zone — see `LunarLanderConstants.ts`.
-- **Nested constants.** `src/lunar-lander/model/LunarLanderConstants.ts`.
+- **Nested constants.** `src/LunarLanderConstants.ts`.
 
 ## View components
 

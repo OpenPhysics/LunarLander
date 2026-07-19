@@ -7,8 +7,8 @@
  *   - a soft landing in a fresh scored zone earns a bonus
  */
 import { NumberProperty } from "scenerystack/axon";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import { CrashState } from "./CrashState.js";
-import LunarLanderConstants from "./LunarLanderConstants.js";
 
 export class ScoreKeeper {
   public readonly scoreProperty = new NumberProperty(0);

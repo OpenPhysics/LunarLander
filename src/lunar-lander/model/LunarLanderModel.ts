@@ -19,11 +19,11 @@ import {
 } from "scenerystack/axon";
 import { Vector2 } from "scenerystack/dot";
 import type { TModel } from "scenerystack/joist";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import type { LunarLanderPreferencesModel } from "../../preferences/LunarLanderPreferencesModel.js";
 import lunarLanderQueryParameters from "../../preferences/lunarLanderQueryParameters.js";
 import { CrashState } from "./CrashState.js";
 import { Lander } from "./Lander.js";
-import LunarLanderConstants from "./LunarLanderConstants.js";
 import { ScoreKeeper } from "./ScoreKeeper.js";
 import { Terrain } from "./Terrain.js";
 

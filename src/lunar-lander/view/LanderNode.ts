@@ -25,8 +25,8 @@ import { Shape } from "scenerystack/kite";
 import type { ModelViewTransform2 } from "scenerystack/phetcommon";
 import { Circle, LinearGradient, Node, Path } from "scenerystack/scenery";
 import LunarLanderColors from "../../LunarLanderColors.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import { CrashState } from "../model/CrashState.js";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
 import type { LunarLanderModel } from "../model/LunarLanderModel.js";
 
 const { MAX_THRUST, RCS_PUFF_DURATION } = LunarLanderConstants;

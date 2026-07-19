@@ -12,7 +12,7 @@ import { Vector2 } from "scenerystack/dot";
 import { Shape } from "scenerystack/kite";
 import { Circle, Node, Path, RadialGradient } from "scenerystack/scenery";
 import LunarLanderColors from "../../LunarLanderColors.js";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 
 // Small deterministic PRNG (mulberry32) so the starfield is identical every run.
 function mulberry32(seed: number): () => number {

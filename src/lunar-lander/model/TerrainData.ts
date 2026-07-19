@@ -11,7 +11,7 @@
  * game uses the same terrain. Pads are laid left-to-right; the total width defines
  * the model's horizontal extent (see Terrain.maxX).
  */
-import LunarLanderConstants from "./LunarLanderConstants.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 
 export type FlatSegment = { kind: "flat"; x0: number; x1: number; height: number; zoneIndex: number };
 export type SlopeSegment = { kind: "slope"; x0: number; x1: number; height0: number; height1: number };

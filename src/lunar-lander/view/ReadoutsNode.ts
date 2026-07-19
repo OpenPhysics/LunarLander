@@ -11,7 +11,7 @@ import { AlignGroup, HBox, type Node, Text, VBox } from "scenerystack/scenery";
 import { NumberDisplay, PhetFont } from "scenerystack/scenery-phet";
 import { StringManager } from "../../i18n/StringManager.js";
 import LunarLanderColors from "../../LunarLanderColors.js";
-import LunarLanderConstants from "../model/LunarLanderConstants.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 import type { LunarLanderModel } from "../model/LunarLanderModel.js";
 
 const LABEL_FONT = new PhetFont(13);

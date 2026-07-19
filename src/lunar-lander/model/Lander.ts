@@ -7,7 +7,7 @@
  */
 import { DerivedProperty, NumberProperty, type TReadOnlyProperty } from "scenerystack/axon";
 import { Range, Vector2, Vector2Property } from "scenerystack/dot";
-import LunarLanderConstants from "./LunarLanderConstants.js";
+import LunarLanderConstants from "../../LunarLanderConstants.js";
 
 const { MASS_EMPTY, INITIAL_FUEL, MAX_THRUST, GRAVITY, INITIAL_ANGLE, INITIAL_THRUST } = LunarLanderConstants;
 
