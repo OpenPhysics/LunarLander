@@ -24,6 +24,21 @@ current-details) via the `screenSummaryContent` super-option, orders the PDOM th
 `pdomControlAreaNode`, and exposes a11y strings via `StringManager.getA11yStrings()`. This
 sim's `ScreenSummaryContent` is the reference example for live model-derived current-details.
 
+## Testing
+
+Fleet-standard Vitest layout:
+
+| Path | Purpose |
+|---|---|
+| `vitest.config.ts` | Test environment + `setupFiles` when present; `execArgv: ["--expose-gc"]` with memory-leak suite |
+| `tests/setup.ts` | Canvas / AudioContext mocks + `init({ name: "…" })` before SceneryStack imports (when required) |
+| `tests/**/*.test.ts` | Model/physics unit tests — mirror `src/` under `tests/` |
+| `tests/memory-leak.test.ts` | WeakRef + `forceGC` dispose regression (fleet pattern) |
+
+- Put unit tests only under root `tests/` (never co-locate or use `__tests__/`).
+- Run `npm test`. CI runs the suite when a `test` script is present.
+- Expand `memory-leak.test.ts` for components that add/remove nodes or link Properties at runtime (see OpticsLab).
+
 ## Physics (port fidelity)
 
 - Lunar gravity `g = 1.6 m/s²`; empty mass `6839 kg`; max thrust `45000 N`; Tsiolkovsky fuel burn
