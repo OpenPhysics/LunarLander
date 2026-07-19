@@ -19,6 +19,7 @@ import {
 } from "scenerystack/axon";
 import { Vector2 } from "scenerystack/dot";
 import type { TModel } from "scenerystack/joist";
+import { TimeModel } from "../../common/TimeModel.js";
 import LunarLanderConstants from "../../LunarLanderConstants.js";
 import type { LunarLanderPreferencesModel } from "../../preferences/LunarLanderPreferencesModel.js";
 import lunarLanderQueryParameters from "../../preferences/lunarLanderQueryParameters.js";
@@ -55,7 +56,7 @@ export class LunarLanderModel implements TModel {
   public readonly hitBoulderProperty = new BooleanProperty(false);
 
   // Paused until the player presses Start; then gated by the Play/Pause control.
-  public readonly isPlayingProperty = new BooleanProperty(false);
+  public readonly timer = new TimeModel(false);
   public readonly hasStartedProperty = new BooleanProperty(false);
 
   public readonly showVectorsProperty = new BooleanProperty(lunarLanderQueryParameters.showVectors);
@@ -143,17 +144,18 @@ export class LunarLanderModel implements TModel {
   /** Dismiss the start overlay and begin play. */
   public startGame(): void {
     this.hasStartedProperty.value = true;
-    this.isPlayingProperty.value = true;
+    this.timer.isPlayingProperty.value = true;
   }
 
   // ── Stepping ────────────────────────────────────────────────────────────────
 
   public step(dt: number): void {
-    if (!this.isPlayingProperty.value) {
+    this.timer.step(dt);
+    if (!this.timer.isPlayingProperty.value) {
       return;
     }
     this.timeAccumulator = Math.min(this.timeAccumulator + dt, FIXED_DT * MAX_CATCHUP_STEPS);
-    while (this.timeAccumulator >= FIXED_DT && this.isPlayingProperty.value) {
+    while (this.timeAccumulator >= FIXED_DT && this.timer.isPlayingProperty.value) {
       this.timeAccumulator -= FIXED_DT;
       this.stepInternal(FIXED_DT);
     }
@@ -266,7 +268,7 @@ export class LunarLanderModel implements TModel {
     this.crashStateProperty.reset();
     this.landingSpeedProperty.reset();
     this.hitBoulderProperty.reset();
-    this.isPlayingProperty.reset();
+    this.timer.reset();
     this.hasStartedProperty.reset();
     this.showVectorsProperty.reset();
     this.showVectorsProperty.value = this.preferences.showVectorsProperty.value;

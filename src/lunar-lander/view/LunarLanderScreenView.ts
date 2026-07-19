@@ -142,7 +142,7 @@ export class LunarLanderScreenView extends ScreenView {
     });
 
     // Play/Pause drives the model directly; only meaningful once the game has started.
-    const playPauseButton = new PlayPauseButton(model.isPlayingProperty, {
+    const playPauseButton = new PlayPauseButton(model.timer.isPlayingProperty, {
       radius: 23,
       enabledProperty: model.hasStartedProperty,
       tandem: providedOptions.tandem.createTandem("playPauseButton"),
@@ -268,7 +268,7 @@ export class LunarLanderScreenView extends ScreenView {
             break;
           case "p":
             if (model.hasStartedProperty.value) {
-              model.isPlayingProperty.toggle();
+              model.timer.isPlayingProperty.toggle();
             }
             break;
           default:
