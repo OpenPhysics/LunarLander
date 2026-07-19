@@ -81,7 +81,10 @@
       "hitBoulder": "Chocaste con una roca. Una pata está dañada y se perdió combustible. Fin del juego.",
       "lowFuel": "El combustible se está agotando.",
       "outOfFuel": "Sin combustible. El motor se ha apagado."
-    }
+    },
+    "playPauseStart": "Reproducir",
+    "playPauseEnd": "Pausa",
+    "resetAll": "Restablecer todo"
   },
   "preferences": {
     "title": "Simulación",

@@ -81,7 +81,10 @@
       "hitBoulder": "Hit a boulder. A leg is damaged and fuel is lost. Game over.",
       "lowFuel": "Fuel is running low.",
       "outOfFuel": "Out of fuel. The engine has shut down."
-    }
+    },
+    "playPauseStart": "Play",
+    "playPauseEnd": "Pause",
+    "resetAll": "Reset All"
   },
   "preferences": {
     "title": "Simulation",

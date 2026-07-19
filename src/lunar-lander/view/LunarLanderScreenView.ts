@@ -131,6 +131,7 @@ export class LunarLanderScreenView extends ScreenView {
     throttleControl.left = layoutBounds.minX + margin;
     throttleControl.bottom = layoutBounds.maxY - margin;
 
+    const a11y = StringManager.getInstance().getA11yStrings();
     const resetAllButton = new ResetAllButton({
       ...FLAT_RESET_ALL_BUTTON_OPTIONS,
       listener: () => {
@@ -139,6 +140,7 @@ export class LunarLanderScreenView extends ScreenView {
         this.reset();
       },
       tandem: providedOptions.tandem.createTandem("resetAllButton"),
+      accessibleName: a11y.resetAllStringProperty,
     });
 
     // Play/Pause drives the model directly; only meaningful once the game has started.
@@ -146,6 +148,8 @@ export class LunarLanderScreenView extends ScreenView {
       radius: 23,
       enabledProperty: model.hasStartedProperty,
       tandem: providedOptions.tandem.createTandem("playPauseButton"),
+      startPlayingAccessibleName: a11y.playPauseStartStringProperty,
+      endPlayingAccessibleName: a11y.playPauseEndStringProperty,
     });
 
     const bottomControls = new HBox({

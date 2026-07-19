@@ -81,7 +81,10 @@
       "hitBoulder": "Choc contre un rocher. Un pied est endommagé et du carburant est perdu. Fin de partie.",
       "lowFuel": "Le carburant est presque épuisé.",
       "outOfFuel": "Panne sèche. Le moteur s'est arrêté."
-    }
+    },
+    "playPauseStart": "Lecture",
+    "playPauseEnd": "Pause",
+    "resetAll": "Tout réinitialiser"
   },
   "preferences": {
     "title": "Simulation",
