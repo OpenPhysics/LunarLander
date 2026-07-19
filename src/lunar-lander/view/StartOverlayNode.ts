@@ -49,7 +49,7 @@ export class StartOverlayNode extends Node {
     });
 
     // Iconic right-pointing "play" triangle.
-    const playIcon = new Path(new PlayIconShape(26, 32), { fill: "black" });
+    const playIcon = new Path(new PlayIconShape(26, 32), { fill: LunarLanderColors.playIconColorProperty });
     const startButton = new RoundPushButton({
       content: playIcon,
       baseColor: LunarLanderColors.startButtonColorProperty,

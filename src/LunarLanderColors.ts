@@ -69,9 +69,12 @@ const LunarLanderColors = {
   rcsPuffColorProperty: profileColor("rcsPuff", "rgba(255,255,255,0.85)", "rgba(120,120,140,0.85)"),
   explosionColorProperty: profileColor("explosion", "#ff7020", "#e85a10"),
 
-  // ── Vectors (same hue on both themes, matching the original sim) ──────────────
+  // ── Vectors (brighter on dark, darker on projector — same pattern as LadyBug) ─
   velocityVectorColorProperty: profileColor("velocityVector", "#35cc35", "#1f9e1f"),
-  accelerationVectorColorProperty: profileColor("accelerationVector", "#cd2520", "#cd2520"),
+  accelerationVectorColorProperty: profileColor("accelerationVector", "#cd2520", "#9c1c18"),
+
+  // Play triangle on the green Start button (dark for contrast on either profile).
+  playIconColorProperty: profileColor("playIcon", BLACK, BLACK),
 
   // ── Panels / text / readouts ──────────────────────────────────────────────────
   // Base color for the on-screen control buttons (throttle arrows, full-thrust).
