@@ -24,6 +24,10 @@ current-details) via the `screenSummaryContent` super-option, orders the PDOM th
 `pdomControlAreaNode`, and exposes a11y strings via `StringManager.getA11yStrings()`. This
 sim's `ScreenSummaryContent` is the reference example for live model-derived current-details.
 
+## Compliance carve-outs
+
+- **Nested constants:** `src/lunar-lander/model/LunarLanderConstants.ts` — Flash-port physics constants kept next to the lander model.
+
 ## Testing
 
 Fleet-standard Vitest layout:
