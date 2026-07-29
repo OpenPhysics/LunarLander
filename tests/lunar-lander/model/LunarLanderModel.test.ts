@@ -4,7 +4,7 @@ import { CrashState } from "../../../src/lunar-lander/model/CrashState.js";
 import { LunarLanderModel } from "../../../src/lunar-lander/model/LunarLanderModel.js";
 import { LunarLanderPreferencesModel } from "../../../src/preferences/LunarLanderPreferencesModel.js";
 
-const { FIXED_DT } = LunarLanderConstants;
+const FIXED_DT: number = LunarLanderConstants.FIXED_DT;
 
 describe("LunarLanderModel", () => {
   let model: LunarLanderModel;

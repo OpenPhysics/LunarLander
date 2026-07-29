@@ -8,7 +8,7 @@ import LunarLanderConstants from "../src/LunarLanderConstants.js";
 import { LunarLanderModel } from "../src/lunar-lander/model/LunarLanderModel.js";
 import { LunarLanderPreferencesModel } from "../src/preferences/LunarLanderPreferencesModel.js";
 
-const { FIXED_DT } = LunarLanderConstants;
+const FIXED_DT: number = LunarLanderConstants.FIXED_DT;
 
 async function forceGC(earlyExitRef?: WeakRef<object>): Promise<void> {
   for (let i = 0; i < 15; i++) {
