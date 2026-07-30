@@ -45,7 +45,7 @@ describe("LunarLanderModel", () => {
 
     freeFall.startGame();
     thrusting.startGame();
-    thrusting.setThrust(LunarLanderConstants.MAX_THRUST);
+    thrusting.toggleFullThrust();
 
     for (let i = 0; i < 10; i++) {
       freeFall.step(FIXED_DT);
