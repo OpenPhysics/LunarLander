@@ -10,6 +10,7 @@ import { PhetFont } from "scenerystack/scenery-phet";
 import { Checkbox } from "scenerystack/sun";
 import type { Tandem } from "scenerystack/tandem";
 import { StringManager } from "../i18n/StringManager.js";
+import LunarLanderColors from "../LunarLanderColors.js";
 import LunarLanderNamespace from "../LunarLanderNamespace.js";
 import type { LunarLanderPreferencesModel } from "./LunarLanderPreferencesModel.js";
 
@@ -17,15 +18,22 @@ export class LunarLanderPreferencesNode extends VBox {
   public constructor(preferencesModel: LunarLanderPreferencesModel, tandem?: Tandem) {
     const prefStrings = StringManager.getInstance().getPreferences();
 
+    // Preferences dialog is always white — use control-surface colors, not textColorProperty.
     const header = new Text(prefStrings.titleStringProperty, {
       font: new PhetFont({ size: 18, weight: "bold" }),
+      fill: LunarLanderColors.controlSurfaceTextColorProperty,
     });
 
     const showVectorsCheckbox = new Checkbox(
       preferencesModel.showVectorsProperty,
-      new Text(prefStrings.showVectorsStringProperty, { font: new PhetFont(14) }),
+      new Text(prefStrings.showVectorsStringProperty, {
+        font: new PhetFont(14),
+        fill: LunarLanderColors.controlSurfaceTextColorProperty,
+      }),
       {
         spacing: 8,
+        checkboxColor: LunarLanderColors.controlSurfaceTextColorProperty,
+        checkboxColorBackground: LunarLanderColors.controlSurfaceColorProperty,
         ...(tandem && { tandem: tandem.createTandem("showVectorsCheckbox") }),
       },
     );
