@@ -8,11 +8,11 @@
  */
 import { Bounds2, Matrix3, toFixed, Vector2 } from "scenerystack/dot";
 import { Shape } from "scenerystack/kite";
+import { type EmptySelfOptions, optionize } from "scenerystack/phet-core";
 import { ModelViewTransform2, StringUtils } from "scenerystack/phetcommon";
 import { HBox, KeyboardListener, Node } from "scenerystack/scenery";
 import { PlayPauseButton, ResetAllButton } from "scenerystack/scenery-phet";
-import type { ScreenViewOptions } from "scenerystack/sim";
-import { ScreenView } from "scenerystack/sim";
+import { ScreenView, type ScreenViewOptions } from "scenerystack/sim";
 import type { Tandem } from "scenerystack/tandem";
 import { FLAT_RESET_ALL_BUTTON_OPTIONS } from "../../common/LunarLanderButtonOptions.js";
 import { StringManager } from "../../i18n/StringManager.js";
@@ -64,7 +64,13 @@ export class LunarLanderScreenView extends ScreenView {
 
   public constructor(model: LunarLanderModel, providedOptions: LunarLanderScreenViewOptions) {
     // Provide the accessible screen summary (Interactive Description) read by screen readers.
-    super({ ...providedOptions, screenSummaryContent: new LunarLanderScreenSummaryContent(model) });
+    const options = optionize<LunarLanderScreenViewOptions, EmptySelfOptions, ScreenViewOptions>()(
+      {
+        screenSummaryContent: new LunarLanderScreenSummaryContent(model),
+      },
+      providedOptions,
+    );
+    super(options);
     this.model = model;
 
     const layoutBounds = this.layoutBounds;
