@@ -1,5 +1,7 @@
 # Lunar Lander
 
+[![CI](https://github.com/OpenPhysics/LunarLander/actions/workflows/ci.yml/badge.svg)](https://github.com/OpenPhysics/LunarLander/actions/workflows/ci.yml)
+
 A [SceneryStack](https://scenerystack.org/) port of the classic PhET **Lunar Lander** simulation. Pilot a
 lunar module to a soft landing by managing thrust and tilt while fuel runs down and terrain hazards loom.
 
