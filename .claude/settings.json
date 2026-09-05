@@ -1,18 +1,7 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(npm run check)",
-      "Bash(npm run lint)",
-      "Bash(npm root *)",
-      "Bash(npm ls *)"
-    ]
-  },
   "extraKnownMarketplaces": {
     "openphysics": {
-      "source": {
-        "source": "github",
-        "repo": "OpenPhysics/Baton"
-      }
+      "source": { "source": "github", "repo": "OpenPhysics/Baton" }
     }
   },
   "enabledPlugins": {
